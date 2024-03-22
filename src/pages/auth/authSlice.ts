@@ -75,7 +75,7 @@ const auth = createSlice({
         window.location.reload();
       })
       .addCase(getMyInfo.fulfilled, (state, action: PayloadAction<any>) => {
-        state.user = action.payload.data;
+        state.user = action.payload?.data;
         sessionStorage.setItem(Config.storageKey.auth, JSON.stringify(state));
       })
       .addCase(signupUser.fulfilled, (state, action: PayloadAction<any>) => {
