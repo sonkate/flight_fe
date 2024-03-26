@@ -45,6 +45,7 @@ import Card from "@mui/joy/Card";
 import CardContent from "@mui/joy/CardContent";
 import Chip from "@mui/joy/Chip";
 import Typography from "@mui/joy/Typography";
+import Swal from "sweetalert2"
 
 interface Props {
   passengersInput: ICustomerInput[];
@@ -92,7 +93,24 @@ const CartMainView = (props: Props) => {
       ticketId: voucherData.id,
     };
 
+
+    // --------------------------------------------------------------
+    // MODIFIED CODE
+    console.log("1/bookingData", bookingData)
+
     const res: any = await dispatch(addBooking(bookingData)).unwrap();
+
+    console.log("2/res", res)
+    console.log("3/from_data", res.data.from_data)
+    Swal.fire({
+      title: "Your Payment Link",
+      html: "<a href='https://example.com' target='_blank'><button class='btn btn-primary'>Please click on this link to proceed your payment.</button></a>",
+      icon: "info",
+      confirmButtonColor: "#5a67d8"
+    })
+    // --------------------------------------------------------------
+
+
     const { success, message } = res;
     if (success) {
       customToast(ToastType.SUCCESS, message);
