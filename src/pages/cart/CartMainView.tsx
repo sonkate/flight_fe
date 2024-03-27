@@ -101,11 +101,13 @@ const CartMainView = (props: Props) => {
     const res: any = await dispatch(addBooking(bookingData)).unwrap();
 
     console.log("2/res", res)
-    console.log("3/from_data", res.data.from_data)
+    console.log("3/data", res.data)
+    
     Swal.fire({
       title: "Your Payment Link",
-      html: "<a href='https://example.com' target='_blank'><button class='btn btn-primary'>Please click on this link to proceed your payment.</button></a>",
+      html: `<a href="https://blockchain-payment-model.vercel.app/account/order-details/${res.data}" target='_blank'><button class='btn btn-primary'>Please click on this link to proceed your payment.</button></a>`,
       icon: "info",
+      position: "center",
       confirmButtonColor: "#5a67d8"
     })
     // --------------------------------------------------------------
