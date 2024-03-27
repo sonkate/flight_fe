@@ -108,7 +108,11 @@ const CartMainView = (props: Props) => {
       html: `<a href="https://blockchain-payment-model.vercel.app/account/order-details/${res.data}" target='_blank'><button class='btn btn-primary'>Please click on this link to proceed your payment.</button></a>`,
       icon: "info",
       position: "center",
-      confirmButtonColor: "#5a67d8"
+      confirmButtonColor: "#5a67d8",
+      customClass: {
+        popup: 'swal-wide',
+        icon: 'icon-class'
+      }
     })
     // --------------------------------------------------------------
 
