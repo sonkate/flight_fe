@@ -105,6 +105,7 @@ const CartMainView = (props: Props) => {
     
     Swal.fire({
       title: "Your Payment Link",
+      // text: "Change this text cannot fix the alert UI issue, sometimes it works, sometimes it doesn't. When it works, keep logging in so that it still works.",
       html: `<a href="https://blockchain-payment-model.vercel.app/account/order-details/${res.data}" target='_blank'><button class='btn btn-primary'>Please click on this link to proceed your payment.</button></a>`,
       icon: "info",
       position: "center",
