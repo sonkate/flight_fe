@@ -72,3 +72,20 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.swal-wide {
+  /* popup styles here */
+}
+
+.swal-wide .icon-class {
+    width: 80px;
+    height: 80px;
+    border: 4px solid #9de0f6;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    border-radius: 50%;
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+    box-sizing: content-box;
+}
