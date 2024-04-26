@@ -11,6 +11,8 @@ import Bamboo from "./png/bamboo.png";
 import EmptyAirplane from "./png/emptyPlane.png";
 
 import { ReactComponent as Paypal } from "./svg/PayPal.svg";
+// BKpay.png -> BKpay_logo.png -> BKpay_logo.jpg -> BKPay.svg
+import { ReactComponent as BKpay } from "./svg/BKPay.svg";
 
 export {
   Hero,
@@ -25,4 +27,5 @@ export {
   VietJet,
   Paypal,
   EmptyAirplane,
+  BKpay
 };

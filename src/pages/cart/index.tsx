@@ -9,7 +9,7 @@ import {
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-import { Paypal } from "assets";
+import { Paypal, BKpay } from "assets";
 import { useAppSelector } from "app/hooks";
 import { cartSelector } from "app/selectors";
 
@@ -45,7 +45,7 @@ const Cart = () => {
     { icon: <LocalAtmIcon />, name: "Cash" },
     { icon: <AccountBalanceIcon />, name: "Internet Banking" },
     { icon: <CreditCardIcon />, name: "Credit / Debit card" },
-    { icon: <Paypal />, name: "Paypal" },
+    { icon: <BKpay/>, name: "BKpay" },
   ];
 
   const billData: ILabelValue[] = [
